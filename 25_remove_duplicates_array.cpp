@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 //from an array display the first k unique elements and with redundant remaining element and return k
 //shift or remove the normal order into the order of the unique elements
 //using hasmap to store elements and its frequency
