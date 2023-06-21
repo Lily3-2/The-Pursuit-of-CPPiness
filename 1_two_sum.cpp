@@ -4,6 +4,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/* greedy approach 
+2 pointer concept
+takes too much time TC = O(nlogn) 
+SC = O(1) 
+so beneficial if we have to return true or false
+
+vector<int> two_sum(vector<int> &nums, int target){
+  vector<int> ans;
+  int sum =0;
+  sort(nums.begin(), nums.end());  //TC = (n logn)
+  int left = 0;
+  int right = nums.size()-1;
+  while(left<right){
+    sum = nums[left]+nums[right];
+    if(sum == target){
+      return "Yes";
+    }
+    else if(sum < target){
+      left++;
+    }
+    else {
+      right--;
+    }
+  }
+  return "No";
+}
+
+*/
+
 
 // TC - O(N) & SC = O(N)
 vector<int> two_sum(vector<int> &nums, int target){
@@ -21,6 +50,8 @@ vector<int> two_sum(vector<int> &nums, int target){
   }
   return ans;
 }
+
+
 
 /*brute force
 vector<int> two_sum(vector<int> &nums, int target){
