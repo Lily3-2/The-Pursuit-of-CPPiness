@@ -1,18 +1,27 @@
 // LC = 796. Rotate String
 
-bool rotateString(string s, string goal) {
-    //string s2 = s;
-    bool ans;
-    if(s.length() != goal.length()) {
+/*
+Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
+A shift on s consists of moving the leftmost character of s to the rightmost position.
+For example, if s = "abcde", then it will be "bcdea" after one shift.
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool rotateString(string s, string goal){
+    if(s.length() != goal.length()){
         return false;
     }
-    string concatS = s + s;
+    string concat = s + s;
+    
 
-for (int i = 0; i < concatS.length() - goal.length() + 1; i++) {
-    if (concatS.substr(i, goal.length()) == goal) {
-        return true;
-    }
 }
 
-return false;
+int main (){
+    string s = "abcde";
+    string goal = "cdeab";
+
+    cout << rotateString(s, goal);
+    return 0;
 }
