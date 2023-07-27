@@ -43,7 +43,7 @@ void insertAtPosition(Node* &head, Node* &tail, int position, int d) {
     cnt++;
   }
   //insert at last postion and update tail
-  if (temp->next = NULL){
+  if (temp->next == NULL){
     insertAtTail(tail, d);
     return;
   }
