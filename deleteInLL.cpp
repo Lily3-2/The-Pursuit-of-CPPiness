@@ -9,6 +9,7 @@ class Node {
     this -> data = data;
     this -> next = NULL;
   }
+  //destructor
   ~Node(){
     int value = this -> data;
     if(this-> next != NULL){
@@ -51,6 +52,7 @@ void insertAtposition(Node* &head, Node* &tail, int position, int data) {
 } 
 
 void deleteNode(Node* &head, int position) {
+  //delete the node if it's the first / head node
   if(position == 1) {
     Node* temp = head;
     head = head -> next; 
@@ -59,6 +61,7 @@ void deleteNode(Node* &head, int position) {
     
   }
   else{
+    // if the node is middle or last node
     Node* prev = NULL;
     Node* current = head;
     int count = 1;
@@ -68,6 +71,7 @@ void deleteNode(Node* &head, int position) {
       current = current -> next;
     }
     prev -> next = current -> next;
+    //make sure the next doesnt point to next node
     current -> next = NULL;
     delete current;
   }
