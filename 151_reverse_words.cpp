@@ -1,9 +1,38 @@
 // LC - 151. Reverse Words in a String
-
+// Return a string of the words in reverse order concatenated by a single space.
 
 #include <bits/stdc++.h>
 using namespace std;
 
+// TC AND SC = O(N)
+
+string reverseWords(string s) {
+    reverse(s.begin(), s.end());
+    string ans;
+    int i = 0;
+    while(i< s.length()) {
+        while(i<s.length() && s[i] == ' ') {
+            i++;
+        }
+
+        string temp;
+        while(i<s.length() && s[i] != ' ') {
+            temp = s[i] + temp;
+            i++;
+        }
+        if (!temp.empty()) {
+            if (!ans.empty()) {
+                ans = ans + ' ' + temp;
+            } else {
+                ans = temp;
+            }
+        }
+    }
+    return ans;
+}
+
+
+/*
 string reverseWords(string s) {
     string temp = "";
     stack<string>st;
@@ -33,6 +62,7 @@ string reverseWords(string s) {
     return ans;
     
 }
+*/
 int main() {
     string s;
     getline(cin, s); // read the entire line of input even the whitespaces
