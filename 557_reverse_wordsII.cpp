@@ -1,7 +1,7 @@
 // LC - 557. Reverse Words in a String III
 
 // Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
-// TC = , SC = 
+// TC = o(n), SC = O(n)
 
 #include <bits/stdc++.h>
 using namespace std;
